@@ -24,11 +24,11 @@ read -p "Continue? (y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][e
 # Check that client is installed in system
 if test -f "$universal"
 then
-	echo "\nrhcl Universal app installed\n"
+    echo "\nrhcl Universal app installed\n"
     binary=$universal
 
 else
-	echo "rhcl client is not installed, downloading from ${app_link}"
+    echo "rhcl client is not installed, downloading from ${app_link}"
     curl -L "${app_link}" > ~/Downloads/client_app.zip
     echo "\nMoving app to /Applications folder..."
     ditto -xk ~/Downloads/client_app.zip /Applications
@@ -39,6 +39,7 @@ else
     xattr -d com.apple.quarantine /Applications/rhclUniversal.app
     sudo chown -R root /Applications/rhclUniversal.app
     sudo chmod -R 755 /Applications/rhclUniversal.app
+    binary=$universal
     # exit 1
 fi
 
