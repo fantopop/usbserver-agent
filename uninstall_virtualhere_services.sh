@@ -4,6 +4,7 @@ app="/Applications/VirtualHereUniversal.app"
 app_agent="/Applications/VirtualHere RUN THIS APP.app"
 config="/Users/Shared/VirtualHere"
 agent_42post="/Library/LaunchAgents/ru.42post.virtualhere.admin.plist"
+agent_virtualhere="/Library/LaunchDaemons/com.virtualhere.vhclient.plist"
 
 # Welcome
 echo "This utility will ininstall VirtualHere client and services"
@@ -21,8 +22,12 @@ sudo rm -r "${app_agent}"
 echo "Removing configurations: ${config}"
 sudo rm -r ${config}
 
+# Remove VirtualHere agent
+echo "Removing VirtualHere agent: ${agent_virtualhere}"
+sudo rm ${agent_virtualhere}
+
 # Remove 42post agent
-echo "removing 42post agent: ${agent_42post}"
+echo "Removing 42post agent: ${agent_42post}"
 sudo rm ${agent_42post}
 
 echo "Done!"
