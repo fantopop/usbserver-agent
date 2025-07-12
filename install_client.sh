@@ -101,8 +101,8 @@ printf "\nInstalling LaunchAgent to:\n${launchagents}/${agent}\n"
 sudo echo "${agent_body}" > ${launchagents}/${agent}
 
 # fix ownership for agent
-# sudo chown root ${launchagents}/${agent}
-# sudo chmod 755 ${launchagents}/${agent}
+sudo chown root ${launchagents}/${agent}
+sudo chmod 755 ${launchagents}/${agent}
 
 echo "\nUnloading old agent if present..."
 # unload old agent
