@@ -9,8 +9,8 @@
 1. Download install script and and run with sudo:
 
         curl -L "https://github.com/fantopop/usbserver-agent/raw/refs/heads/main/install_client.sh" > ~/Downloads/install_client.sh
-        chmod a+x ~/Downloads/install_client.command
-        sudo ~/Downloads/install_client.command
+        chmod a+x ~/Downloads/install_client.sh
+        sudo ~/Downloads/install_client.sh
 
 4. Accept all macOS Security prompts.
 5. Reboot!
