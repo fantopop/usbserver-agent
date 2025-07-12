@@ -23,6 +23,7 @@ rhcl_agent="ru.42post.rhcl.admin.client.plist"
 rhcl_config="${shared}/rhcl"
 
 vh_universal_app="/Applications/VirtualHereUniversal.app"
+vh_intel_app="/Applications/VirtualHere.app"
 vh_agent_app="/Applications/VirtualHere RUN THIS APP.app"
 vh_agent="ru.42post.virtualhere.admin.plist"
 vh_daemon="/Library/LaunchDaemons/com.virtualhere.vhclient.plist"
@@ -194,10 +195,12 @@ function uninstall_vh() {
     printf "\nStopping daemon: ${GREEN}$vh_daemon${NC}\n";
     launchctl stop $vh_daemon;
 
-    # Remove application
+    # Remove Intel & Universal applications
     printf "\nRemoving application: ${GREEN}$vh_universal_app${NC}\n";
     sudo rm -r ${vh_universal_app};
-
+    printf "\nRemoving application: ${GREEN}$vh_intel_app${NC}\n";
+    sudo rm -r ${vh_intel_app};
+    
     # Remove agent application
     printf "Removing agent application: ${GREEN}$vh_agent_app${NC}\n";
     sudo rm -r "${vh_agent_app}";
