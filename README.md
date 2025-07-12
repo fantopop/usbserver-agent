@@ -1,5 +1,4 @@
-# usbserver-agent
-Install &amp; run NIO-EUSB client in admin mode
+# Install &amp; run NIO-EUSB client in admin mode
 
 1. Delete any previous VirtualHere client installation if needed:
 
