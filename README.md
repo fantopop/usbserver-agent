@@ -1,17 +1,10 @@
 # Install &amp; run NIO-EUSB client in admin mode
 
-1. Quit any running USB-Server client.
-2. Delete any previous VirtualHere client installation if needed:
-
-        curl -L "https://github.com/fantopop/usbserver-agent/raw/refs/heads/main/uninstall_virtualhere_services.sh" > ~/Downloads/uninstall_virtualhere_services.sh
-        chmod a+x ~/Downloads/uninstall_virtualhere_services.sh
-        sudo ~/Downloads/uninstall_virtualhere_services.sh
-
-3. Download install script and and run with sudo:
+1. Copy these lines into Terminal and enter admin password when prompted. If there are any previous VirtualHere or rhcl (NIO-EUSB) installations, chose options 2/3 to uninstall them. Then run the script again and install USB Client & Service Agent.
 
         curl -L "https://github.com/fantopop/usbserver-agent/raw/refs/heads/main/install_client.sh" > ~/Downloads/install_client.sh
         chmod a+x ~/Downloads/install_client.sh
         sudo ~/Downloads/install_client.sh
 
-4. Accept all macOS Security prompts.
-5. Reboot!
+2. Accept all macOS Security prompts.
+3. Reboot!
